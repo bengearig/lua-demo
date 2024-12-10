@@ -22,3 +22,18 @@ setTPS(tps) --> nil
 isWall(x, y) --> isWall: boolean
 
 ]]
+
+function getIdsByType(type)
+    ids = getInstanceIds()
+    tIds = {}
+    for i = 1, length(ids) do
+        if getInstanceType(ids[i]) == type then
+            table.insert(tIds, ids[i])
+        end
+    end
+    return tIds
+end
+
+setPlayerDirection(DIRECTION["WEST"])
+step = 0
+
