@@ -1,7 +1,24 @@
-local a, b = 1, 10
-if a < b then
-    print(a)   --> 1
-    local a    -- `= nil' is implicit
-    print(a)   --> nil
-end          -- ends the block started at `then'
-print(a, b)   -->  1   10
+--[[
+
+BUILT-IN VARIABLES:
+
+DIRECTION = {
+    NONE = 0,
+    EAST = 1,
+    NORTH = 2,
+    WEST = 3
+    SOUTH = 4
+}
+
+BUILT-IN FUNCTIONS:
+
+length(table) --> length: number
+getInstanceIds() --> instanceIds: table
+getInstancePosition(instanceId) --> x: number, y: number
+getInstanceType(instanceId) --> type: string
+getDirection() --> direction: number
+setPlayerDirection(direction) --> nil
+setTPS(tps) --> nil
+isWall(x, y) --> isWall: boolean
+
+]]
